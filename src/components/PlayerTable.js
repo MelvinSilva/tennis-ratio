@@ -6,13 +6,24 @@ import { MdOutlineSportsTennis } from 'react-icons/md'
 
 function PlayerTable({ players, calculateRatio }) {
 
-    const sortedPlayers = players.sort((a, b) => {
-        const ratioA = calculateRatio(a.servicesPlayed, a.servicesWon);
-        const ratioB = calculateRatio(b.servicesPlayed, b.servicesWon);
-        return ratioB - ratioA;
-    });
+    const sortedPlayers = [...players].sort((a, b) => {
+        // calcule le ratio pour chaque joueur
+        const aRatio = calculateRatio(a.servicesPlayed, a.servicesWon);
+        const bRatio = calculateRatio(b.servicesPlayed, b.servicesWon);
+      
+        // si le ratio de A est supérieur au ratio de B, A doit être classé avant B (décroissant)
+        if (aRatio > bRatio) return -1;
+      
+        // si le ratio de A est inférieur au ratio de B, A doit être classé après B (décroissant)
+        if (aRatio < bRatio) return 1;
+      
+        // si les ratios sont égaux, les joueurs peuvent être classés dans n'importe quel ordre
+        return 0;
+      });
 
-    return (<div>
+
+    return (
+    <div>
         <h3>Classement des joueurs</h3>
         <Table striped bordered hover>
             <thead>

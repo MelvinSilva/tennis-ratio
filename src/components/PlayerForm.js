@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Card } from 'react-bootstrap';
+import { Form, FormGroup } from 'react-bootstrap';
 import { GiTennisBall } from 'react-icons/gi';
 import { MdOutlineSportsTennis } from 'react-icons/md'
 
