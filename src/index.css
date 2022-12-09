@@ -9,15 +9,19 @@ body {
 }
 
 * {
-  background-color: rgb(253, 253, 248);
+  background-color: #f2f2f2;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.description {
+  margin: 10px;
+  text-align: justify;
+}
 .info-player {
   width: 160px;
   margin: 10px;
   text-align: center;
-  border: 2px solid rgba(21, 156, 154, 0.481);
+  border: 1px solid #151534;
   border-radius: 5px;
 }
 
@@ -65,7 +69,7 @@ h3 {
   width: 50px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(21, 156, 153);
+  background-color: #151534;
   color: white;
   font-size: 20px;
   font-weight: 900;
@@ -76,7 +80,7 @@ h3 {
   width: 115px;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #151534;
 }
 
 td, th {
@@ -86,29 +90,30 @@ td, th {
 .title-app {
   text-align: center;
   margin: 10px auto;
-  background-color: rgb(21, 156, 153);
+  background-color: #151534;
   width: auto;
   padding: 10px;
-  color: rgb(255, 246, 169);
+  color: rgb(215, 234, 0);
   font-size: 23px;
 }
 
 .card-head {
   font-weight: 900;
-  background-color: rgba(211, 211, 211, 0.441);
+  background-color: #151534;
   height: 30px;
+  color: white;
 }
 
 svg {
-  color: rgb(255, 213, 0);
+  color: rgb(215, 234, 0);;
 }
 
 span {
-  color:rgb(21, 156, 153);
+  color:#151534;
 }
 
 .add-player button{
-  background-color: rgb(21, 156, 153);
+  background-color: #151534;
   border: none;
   margin: 5px auto;
   border-radius: 5px;
@@ -119,7 +124,7 @@ span {
 }
 
 .enter-name {
-  border: 2px solid rgb(21, 156, 153);;
+  border: 2px solid #151534;
   margin: 5px auto;
   border-radius: 5px;
   color: rgb(0, 0, 0);
