@@ -58,7 +58,7 @@ function PlayerTable({ players, calculateRatio, calculateRatio2 }) {
                                 <td>{player.name}</td>
                                 <td>{player.servicesPlayed}</td>
                                 <td>{player.servicesWon}</td>
-                                {calculateRatio(player.servicesPlayed, player.servicesWon) === "NaN" ? <td>0.00%</td> :
+                                {calculateRatio(player.servicesPlayed, player.servicesWon) === "NaN" ? <td>0.0%</td> :
                                     <td>{calculateRatio(player.servicesPlayed, player.servicesWon)}%</td>}
                             </tr>
                         ))}
@@ -84,7 +84,7 @@ function PlayerTable({ players, calculateRatio, calculateRatio2 }) {
                                 <td>{player.name}</td>
                                 <td>{player.servicesPlayed}</td>
                                 <td>{player.doubleFaute}</td>
-                                {calculateRatio2(player.servicesPlayed, player.doubleFaute) === "NaN" ? <td>0.00%</td> :
+                                {calculateRatio2(player.servicesPlayed, player.doubleFaute) === "NaN" ? <td>0.0%</td> :
                                     <td>{calculateRatio2(player.servicesPlayed, player.doubleFaute)}%</td>}
                             </tr>
                         ))}

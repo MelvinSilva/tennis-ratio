@@ -80,9 +80,9 @@ const PlayerForm = ({ player, calculateRatio, calculateRatio2, onUpdate }) => {
                             <button onClick={incrementDoubleFaute}> + </button>
                             <button onClick={decrementDoubleFaute}> - </button>
                         </div>
-                        {calculateRatio(servicesPlayed, servicesWon) === "NaN" ? <p className='ratioo'>Ratio premiere : <span>0.00%</span></p> :
+                        {calculateRatio(servicesPlayed, servicesWon) === "NaN" ? <p className='ratioo'>Ratio premiere : <span>0.0%</span></p> :
                             <p className='ratioo'>Ratio premiere : <span>{calculateRatio(servicesPlayed, servicesWon)}%</span></p>}
-                        {calculateRatio(servicesPlayed, servicesWon) === "NaN" ? <p className='ratioo'>Ratio double : <span>0.00%</span></p> :
+                        {calculateRatio(servicesPlayed, servicesWon) === "NaN" ? <p className='ratioo'>Ratio double : <span>0.0%</span></p> :
                             <p className='ratioo'>Ratio double : <span>{calculateRatio2(servicesPlayed, doubleFaute)}%</span></p>}
 
                     </FormGroup>

@@ -23,11 +23,11 @@ function PlayerList() {
   }
 
   function calculateRatio(played, won) {
-    return (won / played * 100).toFixed(2);
+    return (won / played * 100).toFixed(1);
   }
 
   function calculateRatio2(played, doubleFaute) {
-    return (doubleFaute / played * 100).toFixed(2);
+    return (doubleFaute / played * 100).toFixed(1);
   }
 
   function handleUpdate(playerIndex, event) {
