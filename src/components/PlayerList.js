@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
-import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Form, FormGroup } from 'react-bootstrap';
 import PlayerForm from './PlayerForm';
 import PlayerTable from './PlayerTable';
 import '../index.css';
@@ -16,6 +16,7 @@ function PlayerList() {
       name: event.target.playerName.value,
       servicesPlayed: 0,
       servicesWon: 0,
+      doubleFaute: 0
     };
     setPlayers([...players, newPlayer]);
     event.target.reset();
@@ -23,6 +24,10 @@ function PlayerList() {
 
   function calculateRatio(played, won) {
     return (won / played * 100).toFixed(2);
+  }
+
+  function calculateRatio2(played, doubleFaute) {
+    return (doubleFaute / played * 100).toFixed(2);
   }
 
   function handleUpdate(playerIndex, event) {
@@ -33,6 +38,7 @@ function PlayerList() {
       ...players[playerIndex],
       servicesPlayed: event.target.servicesPlayed.value,
       servicesWon: event.target.servicesWon.value,
+      doubleFaute: event.target.doubleFaute.value,
     };
     setPlayers([
       ...players.slice(0, playerIndex),
@@ -47,10 +53,9 @@ function PlayerList() {
     <>
       <Form className="add-player" onSubmit={handleSubmit}>
         <FormGroup>
-          <h3>AJOUTER UN JOUEUR</h3>
-          <input className="enter-name" type="text" placeholder="Entrez le nom du joueur" name="playerName" />
+          <input className="enter-name" type="text" placeholder="Entrez le nom du joueur" name="playerName" required />
         </FormGroup>
-        <button className="add-player" type="submit">Ajouter le joueur</button>
+        <button className="add-player" type="submit">Ajouter</button>
       </Form>
 
       {players.length > 0 && (
@@ -63,12 +68,13 @@ function PlayerList() {
               key={player.name}
               player={player}
               calculateRatio={calculateRatio}
+              calculateRatio2={calculateRatio2}
               onUpdate={event => handleUpdate(index, event)}
             />
           ))}
           </div>
           <div className='table-player'>
-          <PlayerTable players={players} calculateRatio={calculateRatio}/>
+          <PlayerTable players={players} calculateRatio={calculateRatio} calculateRatio2={calculateRatio2}/>
           </div>
         </>
       )}
