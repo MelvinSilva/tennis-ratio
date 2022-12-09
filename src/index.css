@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: unset;
 
+
+}
+
+* {
+  background-color: rgb(243, 243, 243);
 }
 
 code {
@@ -18,7 +23,7 @@ code {
   width: 160px;
   margin: 10px;
   text-align: center;
-  border: 2px solid rgb(21, 156, 153);
+  border: 2px solid rgba(21, 156, 154, 0.184);
   border-radius: 5px;
 }
 
@@ -52,6 +57,7 @@ h3 {
   display: flex;
   margin: 5px 20px;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .btn-increment-decrement button {
@@ -62,6 +68,7 @@ h3 {
   color: white;
   font-size: 20px;
   font-weight: 900;
+  text-align: center;
 }
 
 .input-score {

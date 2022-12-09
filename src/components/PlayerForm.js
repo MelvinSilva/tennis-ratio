@@ -31,7 +31,7 @@ const PlayerForm = ({ player, calculateRatio, onUpdate }) => {
     return (
             <div className='card-player'>
                 <div className='info-player'>
-                    <Form onSubmit={onUpdate}>
+                    <Form className="form-player" onSubmit={onUpdate}>
                         <div className='card-head'>{player.name}</div>
                         <FormGroup className="mb-3">
                             <p className='title'>Nombre <MdOutlineSportsTennis /> :</p>
