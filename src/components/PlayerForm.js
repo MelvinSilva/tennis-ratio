@@ -30,9 +30,9 @@ const PlayerForm = ({ player, calculateRatio, onUpdate }) => {
 
     return (
             <div className='card-player'>
-                <Card className='info-player'>
+                <div className='info-player'>
                     <Form onSubmit={onUpdate}>
-                        <Card.Header>{player.name}</Card.Header>
+                        <div className='card-head'>{player.name}</div>
                         <FormGroup className="mb-3">
                             <p className='title'>Nombre <MdOutlineSportsTennis /> :</p>
                             <input
@@ -59,10 +59,11 @@ const PlayerForm = ({ player, calculateRatio, onUpdate }) => {
                             <button onClick={decrementServicesWon}>-</button>
                             </div>
                         </FormGroup>
-                        <p>Ratio : <span>{calculateRatio(servicesPlayed, servicesWon)}%</span></p>
+                        {calculateRatio(servicesPlayed, servicesWon) === "NaN" ? <p>Ratio : <span>0.00%</span></p> :
+                        <p>Ratio : <span>{calculateRatio(servicesPlayed, servicesWon)}%</span></p>}
                         {/*<button className="title-add-result" type="submit">Ajouter les résultats dans le tableau</button>*/}
                     </Form>
-                </Card>
+                </div>
             </div>
     );
 }

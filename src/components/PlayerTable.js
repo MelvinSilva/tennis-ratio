@@ -31,7 +31,8 @@ function PlayerTable({ players, calculateRatio }) {
                         <td>{player.name}</td>
                         <td>{player.servicesPlayed}</td>
                         <td>{player.servicesWon}</td>
-                        <td>{calculateRatio(player.servicesPlayed, player.servicesWon)}%</td>
+                        {calculateRatio(player.servicesPlayed, player.servicesWon) === "NaN" ? <td>0.00%</td> :
+                        <td>{calculateRatio(player.servicesPlayed, player.servicesWon)}%</td>}
                     </tr>
                 ))}
             </tbody>

@@ -47,10 +47,10 @@ function PlayerList() {
     <>
       <Form className="add-player" onSubmit={handleSubmit}>
         <FormGroup>
-          <h3>Ajouter un joueur</h3>
-          <FormControl type="text" placeholder="Entrez le nom du joueur" name="playerName" />
+          <h3>AJOUTER UN JOUEUR</h3>
+          <input className="enter-name" type="text" placeholder="Entrez le nom du joueur" name="playerName" />
         </FormGroup>
-        <Button type="submit">Ajouter le joueur</Button>
+        <button className="add-player" type="submit">Ajouter le joueur</button>
       </Form>
 
       {players.length > 0 && (
@@ -67,7 +67,9 @@ function PlayerList() {
             />
           ))}
           </div>
+          <div className='table-player'>
           <PlayerTable players={players} calculateRatio={calculateRatio}/>
+          </div>
         </>
       )}
     </>

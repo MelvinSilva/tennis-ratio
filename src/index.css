@@ -18,6 +18,8 @@ code {
   width: 160px;
   margin: 10px;
   text-align: center;
+  border: 2px solid rgb(21, 156, 153);
+  border-radius: 5px;
 }
 
 .title {
@@ -58,23 +60,25 @@ h3 {
   border: none;
   background-color: rgb(21, 156, 153);
   color: white;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .input-score {
   width: 85px;
   text-align: center;
   border-radius: 5px;
-  border: none;
   border: 1px solid black;
 }
 
 td, th {
-  font-size: 10px;
+  font-size: 13px;
 }
 
-.card-header {
+.card-head {
   font-weight: 900;
+  background-color: rgba(211, 211, 211, 0.441);
+  height: 30px;
 }
 
 svg {
@@ -83,4 +87,31 @@ svg {
 
 span {
   color:rgb(21, 156, 153);
+}
+
+.add-player button{
+  background-color: rgb(21, 156, 153);
+  border: none;
+  margin: 5px auto;
+  border-radius: 5px;
+  color: white;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.enter-name {
+  border: 2px solid rgb(21, 156, 153);;
+  margin: 5px auto;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  width: 292px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.table-player {
+  width: 360px;
+  margin: auto
 }
